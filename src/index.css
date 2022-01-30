@@ -1,13 +1,103 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.b-header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.alert {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.alert-danger {
+  color: red;
+}
+
+.alert-success {
+  color: green;
+}
+
+.fas {
+  color: #1e90ff;
+}
+
+span {
+  color: #1e90ff;
+}
+
+.form-holder {
+  margin-bottom: 1em;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+input {
+  line-height: 1.8;
+  padding: 0 0.4em;
+  font-size: 20px;
+  outline-color: #1e90ff;
+}
+
+input::placeholder {
+  font-size: 15px;
+}
+
+.submit {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #1e90ff;
+  color: #fff;
+  line-height: 2;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border-top: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 0.4em 0.5em;
+  background-color: red;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }

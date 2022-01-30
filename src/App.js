@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import Header from "./Components/Header";
+import AddBooks from "./Components/AddBooks";
+import Table from "./Components/Table";
 
 function App() {
+  const [books, setBook] = useState([
+    
+  ])
+
+  const addBook = (book) => {
+    const id = Date.now().toString()
+    const newBook = {id, ...book}
+    setBook([...books, newBook])
+  }
+
+  const deleteBook = (isbn) => {
+    setBook(books.filter(book => book.isbn !== isbn))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <AddBooks addBooks={addBook} />
+      <Table books={books} onDelete={deleteBook} />
     </div>
   );
 }
